@@ -119,10 +119,10 @@ optimal_parameters <- function(par_lower
 
   parMCMC <- try(modMCMC(f = min.RSS
                          ,p = as.numeric(pars)
-                         ,niter = 20000
+                         ,niter = 50000
                          ,updatecov = 500, ntrydr = 3
                          ,lower = par_lower , upper = par_upper
-                         ,burninlength = 10000))
+                         ,burninlength = 15000))
 
   out <- summary(parMCMC)
 
